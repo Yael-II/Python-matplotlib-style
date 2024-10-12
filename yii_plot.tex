@@ -1,0 +1,324 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{textgreek}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xparse}
+\usepackage{esint}
+\usepackage{physics}
+
+\renewcommand{\oiint}{\varoiint} % integral symbol
+
+
+\DeclareSymbolFont{yiilm}{T1}{lmr}{m}{n}
+
+\DeclareMathSymbol{\Alpha}{7}{yiilm}{"41}
+\DeclareMathSymbol{\Beta}{7}{yiilm}{"42}
+\DeclareMathSymbol{\Epsilon}{7}{yiilm}{"45}
+\DeclareMathSymbol{\Zeta}{7}{yiilm}{"5A}
+\DeclareMathSymbol{\Eta}{7}{yiilm}{"48}
+\DeclareMathSymbol{\Iota}{7}{yiilm}{"49}
+\DeclareMathSymbol{\Kappa}{7}{yiilm}{"4B}
+\DeclareMathSymbol{\Mu}{7}{yiilm}{"4D}
+\DeclareMathSymbol{\Nu}{7}{yiilm}{"4E}
+\DeclareMathSymbol{\Omicron}{7}{yiilm}{"4F}
+\DeclareMathSymbol{\Rho}{7}{yiilm}{"50}
+\DeclareMathSymbol{\Tau}{7}{yiilm}{"54}
+\DeclareMathSymbol{\Chi}{7}{yiilm}{"58}
+
+\let\yiiepsilon\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\yiiepsilon
+
+\let\Varepsilon\Epsilon
+\let\Vartheta\Theta
+\let\Varpi\Pi
+\let\Varrho\Rho
+\let\Varphi\Phi
+
+\let\textvarepsilon\straightepsilon
+\let\textvarrho\textrho
+\let\textvarphi\textphi
+\let\textphi\straightphi
+\let\textvartheta\texttheta
+\let\texttheta\straighttheta
+\let\textVarepsilon\textEpsilon
+\let\textVartheta\textTheta
+\let\textVarrho\textRho
+\let\textVarphi\textPhi
+
+\newcommand{\omicron}{\mathit{o}}
+\renewcommand{\textomicron}{o}
+\renewcommand{\textOmicron}{O}
+
+
+\newcommand{\mathalpha}{\text{\textalpha}}
+\newcommand{\mathbeta}{\text{\textbeta}}
+\newcommand{\mathgamma}{\text{\textgamma}}
+\newcommand{\mathdelta}{\text{\textdelta}}
+\newcommand{\mathepsilon}{\text{\textepsilon}}
+\newcommand{\mathvarepsilon}{\text{\textvarepsilon}}
+\newcommand{\mathzeta}{\text{\textzeta}}
+\newcommand{\matheta}{\text{\texteta}}
+\newcommand{\maththeta}{\text{\texttheta}}
+\newcommand{\mathvartheta}{\text{\textvartheta}}
+\newcommand{\mathiota}{\text{\textiota}}
+\newcommand{\mathkappa}{\text{\textkappa}}
+\newcommand{\mathlambda}{\text{\textlambda}}
+\newcommand{\mathmu}{\text{\textmu}}
+\newcommand{\mathnu}{\text{\textnu}}
+\newcommand{\mathxi}{\text{\textxi}}
+\newcommand{\mathomicron}{\text{\textomicron}}
+\newcommand{\mathpi}{\text{\textpi}}
+\newcommand{\mathrho}{\text{\textrho}}
+\newcommand{\mathvarrho}{\text{\textvarrho}}
+\newcommand{\mathsigma}{\text{\textsigma}}
+\newcommand{\mathtau}{\text{\texttau}}
+\newcommand{\mathupsilon}{\text{\textupsilon}}
+\newcommand{\mathphi}{\text{\textphi}}
+\newcommand{\mathvarphi}{\text{\textvarphi}}
+\newcommand{\mathchi}{\text{\textchi}}
+\newcommand{\mathpsi}{\text{\textpsi}}
+\newcommand{\mathomega}{\text{\textomega}}
+\newcommand{\mathAlpha}{\text{\textAlpha}}
+\newcommand{\mathBeta}{\text{\textBeta}}
+\newcommand{\mathGamma}{\text{\textGamma}}
+\newcommand{\mathDelta}{\text{\textDelta}}
+\newcommand{\mathEpsilon}{\text{\textEpsilon}}
+\newcommand{\mathVarepsilon}{\text{\textVarepsilon}}
+\newcommand{\mathZeta}{\text{\textZeta}}
+\newcommand{\mathEta}{\text{\textEta}}
+\newcommand{\mathTheta}{\text{\textTheta}}
+\newcommand{\mathVartheta}{\text{\textVartheta}}
+\newcommand{\mathIota}{\text{\textIota}}
+\newcommand{\mathKappa}{\text{\textKappa}}
+\newcommand{\mathLambda}{\text{\textLambda}}
+\newcommand{\mathMu}{\text{\textMu}}
+\newcommand{\mathNu}{\text{\textNu}}
+\newcommand{\mathXi}{\text{\textXi}}
+\newcommand{\mathOmicron}{\text{\textOmicron}}
+\newcommand{\mathPi}{\text{\textPi}}
+\newcommand{\mathRho}{\text{\textRho}}
+\newcommand{\mathVarrho}{\text{\textVarrho}}
+\newcommand{\mathSigma}{\text{\textSigma}}
+\newcommand{\mathTau}{\text{\textTau}}
+\newcommand{\mathUpsilon}{\text{\textUpsilon}}
+\newcommand{\mathPhi}{\text{\textPhi}}
+\newcommand{\mathVarphi}{\text{\textVarphi}}
+\newcommand{\mathChi}{\text{\textChi}}
+\newcommand{\mathPsi}{\text{\textPsi}}
+\newcommand{\mathOmega}{\text{\textOmega}}
+
+\let\micro\mathmu
+% Commands
+%% vectors
+\let\vect\vb
+\let\rot\curl
+
+%% set and spaces
+\newcommand{\set}[1]{\mathbf{#1}} % set (in bold)
+\newcommand{\spc}[1]{\mathcal{#1}} % space (in cal)
+\newcommand{\N}{\set{N}}
+\newcommand{\Z}{\set{Z}}
+\newcommand{\D}{\set{D}}
+\newcommand{\Q}{\set{Q}}
+\newcommand{\R}{\set{R}}
+\newcommand{\C}{\set{C}}
+\newcommand{\K}{\set{K}}
+
+\newcommand{\intqty}[1]{\left[\!\left[{#1}\right]\!\right]}
+
+%% quantities
+\newcommand{\lag}{\mathcal{L}}
+\newcommand{\ham}{\mathcal{H}}
+\newcommand{\mom}{\mathcal{M}}
+
+%% symbols
+\newcommand{\odeg}{\text{°}}
+\newcommand{\omin}{\text{'}}
+\newcommand{\osec}{\text{''}}
+\let\transp\top
+\let\Sun\odot
+\let\Earth\oplus
+
+%% Operators
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\arctantwo}{arctan2}
+\DeclareMathOperator{\FT}{FT}
+\let\lap\laplacian % Physics alias
+
+%% Probability
+\DeclareMathOperator{\p}{\mathbb{P}}
+\DeclareMathOperator{\pO}{\mathbb{O}}
+\DeclareMathOperator{\pF}{\mathbb{F}}
+\DeclareMathOperator{\pdf}{\mathbb{F'}}
+\DeclareMathOperator{\pE}{\mathbb{E}}
+\DeclareMathOperator{\pV}{\mathbb{V}}
+\DeclareMathOperator{\normal}{\mathcal{N}}
+\DeclareMathOperator{\binomial}{\mathcal{B}}
+\DeclareMathOperator{\poisson}{\mathcal{P}}
+
+%% Constants
+\newcommand{\im}{\mathrm{i}}
+\newcommand{\jm}{\mathrm{j}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\NA}{\mathcal{N}_\mathrm{A}}
+\newcommand{\kB}{k_\mathrm{B}}
+\newcommand{\muB}{\mu_\mathrm{B}}
+\newcommand{\cst}{\mathrm{cst}}
+\newcommand{\uma}{\mathrm{u}}
+
+%% Unitary vectors
+\newcommand{\ux}{\vu u_x}
+\newcommand{\uy}{\vu u_y}
+\newcommand{\uz}{\vu u_z}
+\newcommand{\ur}{\vu u_r}
+\newcommand{\un}{\vu u_n}
+\newcommand{\ut}{\vu u_t}
+\newcommand{\urho}{\vu u_\rho}
+\newcommand{\uvarrho}{\vu u_\varrho}
+\newcommand{\utheta}{\vu u_\theta}
+\newcommand{\uvartheta}{\vu u_\vartheta}
+\newcommand{\uphi}{\vu u_\phi}
+\newcommand{\uvarphi}{\vu u_\varphi}
+
+\newcommand{\ex}{\vu e_x}
+\newcommand{\ey}{\vu e_y}
+\newcommand{\ez}{\vu e_z}
+\newcommand{\er}{\vu e_r}
+\newcommand{\en}{\vu e_n}
+\newcommand{\et}{\vu e_t}
+\newcommand{\erho}{\vu e_\rho}
+\newcommand{\evarrho}{\vu e_\varrho}
+\newcommand{\etheta}{\vu e_\theta}
+\newcommand{\evartheta}{\vu e_\vartheta}
+\newcommand{\ephi}{\vu e_\phi}
+\newcommand{\evarphi}{\vu e_\varphi}
+
+\newcommand{\vux}{\vu x}
+\newcommand{\vuy}{\vu y}
+\newcommand{\vuz}{\vu z}
+\newcommand{\vur}{\vu r}
+\newcommand{\vun}{\vu n}
+\newcommand{\vut}{\vu t}
+\newcommand{\vurho}{\vu{\boldsymbol{\rho}}}
+\newcommand{\vuvarrho}{\vu{\boldsymbol{\varrho}}}
+\newcommand{\vutheta}{\vu{\boldsymbol{\theta}}}
+\newcommand{\vuvartheta}{\vu{\boldsymbol{\vartheta}}}
+\newcommand{\vuphi}{\vu{\boldsymbol{\phi}}}
+\newcommand{\vuvarphi}{\vu{\boldsymbol{\varphi}}}
+
+%% Differential elements
+\newcommand{\ds}{\dd{s}}
+\newcommand{\dx}{\dd{x}}
+\newcommand{\dy}{\dd{y}}
+\newcommand{\dz}{\dd{z}}
+\newcommand{\dt}{\dd{t}}
+\newcommand{\dr}{\dd{r}}
+\newcommand{\drho}{\dd{\rho}}
+\newcommand{\dvarrho}{\dd{\varrho}}
+\newcommand{\dtheta}{\dd{\theta}}
+\newcommand{\dvartheta}{\dd{\vartheta}}
+\newcommand{\dphi}{\dd{\phi}}
+\newcommand{\dvarphi}{\dd{\varphi}}
+\newcommand{\deron}{\partial}
+\newcommand{\ddr}{\dd[3]{\vect r}}
+\newcommand{\ddp}{\dd[3]{\vect p}}
+\newcommand{\ddk}{\dd[3]{\vect k}}
+
+%% Physics complement
+\def\diffD{\mathrm{D}}
+\DeclareDocumentCommand\Differential{ o g d() }{
+     \IfNoValueTF{#2}{
+	  \IfNoValueTF{#3}{
+	       \diffD\IfNoValueTF{#1}{}{^{#1}}
+	  }{
+	       \mathinner{\diffD\IfNoValueTF{#1}{}{^{#1}}\argopen(#3\argclose)}}
+	  }{
+	       \mathinner{\diffD\IfNoValueTF{#1}{}{^{#1}}#2} \IfNoValueTF{#3}{}{(#3)}
+	  }
+     }
+\DeclareDocumentCommand\DD{}{\Differential} 
+\DeclareDocumentCommand\Variation{ o g d() }{
+     \IfNoValueTF{#2}{
+	  \IfNoValueTF{#3}{
+	       \Delta \IfNoValueTF{#1}{}{^{#1}}
+	  }{
+	       \mathinner{\Delta \IfNoValueTF{#1}{}{^{#1}}\argopen(#3\argclose)}}
+	  }{
+		\mathinner{\Delta \IfNoValueTF{#1}{}{^{#1}}#2} \IfNoValueTF{#3}{}{(#3)}
+	  }
+     }
+\DeclareDocumentCommand\Var{}{\Variation}
+
+%% other commands
+\newcommand{\eg}{e.g.}
+\newcommand{\etal}{et al}
+\newcommand{\ie}{i.e.}
+\newcommand{\unit}[1]{\mathrm{~#1}}
+\newcommand{\axunit}[1]{\mathrm{~[#1]}}
+\newcommand{\angstrom}{\text{\r A}}
+\newcommand{\range}{\text{--}}
+\newcommand{\E}[1]{\times 10^{#1}}
+\newcommand{\simpropto}{\underset{\sim}{\propto}}
+\newcommand{\cfill}[1]{\hspace*{0cm}\hfill{#1}\hfill\hspace*{0cm}}
+\DeclareDocumentCommand\mean{s m}{
+     \IfBooleanTF{#1}
+     { % \mean*{}
+	  \langle {#2} \rangle
+     }{ % \mean{}
+	  \left\langle {#2} \right\rangle
+     }
+}
+\newcommand{\ope}[1]{\hat{#1}}
+\newcommand{\opevect}[1]{\hat{\vb{#1}}}
+\DeclareDocumentCommand\atom{m g g g o}{
+     \IfNoValueTF{#5}{
+     \IfNoValueTF{#2}{
+	  \mathrm{#1}
+     }{
+     \IfNoValueTF{#3}{
+	  \prescript{#2}{}{\mathrm{#1}}
+     }{
+     \IfNoValueTF{#4}{
+	  \prescript{#2}{#3}{\mathrm{#1}}
+     }{
+	  \prescript{#2}{#3}{\mathrm{#1}}_{#4}
+     }}}}{
+     \IfNoValueTF{#2}{
+	  \mathrm{#1}\text{\textsc{#5}}
+     }{
+     \IfNoValueTF{#3}{
+	  \prescript{#2}{}{\mathrm{#1}\text{\textsc{#5}}}
+     }{
+     \IfNoValueTF{#4}{
+	  \prescript{#2}{#3}{\mathrm{#1}\text{\textsc{#5}}}
+     }{
+	  \prescript{#2}{#3}{\mathrm{#1}\text{\textsc{#5}}}_{#4}
+     }}}}
+}
+\DeclareDocumentCommand\underbraceset{m g}{
+     \IfNoValueTF{#2}{
+	  \underbrace{#1}
+     }{
+	  \underset{#1}{\underbrace{#2}}
+     }
+}
+\DeclareDocumentCommand\overbraceset{m g}{
+ \IfNoValueTF{#2}{
+	  \overbrace{#1}
+     }{
+	  \overset{#1}{\overbrace{#2}}
+     }
+}
+\let\eqdef\equiv
+\let\ol\overline
+\let\ul\underline
+\let\name\text
+% Note: "cases" should now be used instead of "system"
+
+
+
