@@ -69,7 +69,7 @@ savefig.pad_inches: 0
 path.simplify: True
 
 ### Cycler
-axes.prop_cycle: cycler(color=['06518E', 'E8BD0F', '3B795E', '009EDB', 'ED1C24', 'C95BCF'])
+axes.prop_cycle: cycler(color=['06518E','E8BD0F','3B795E','ED1C24','C95BCF','009EDB'])
 
 ### Colormap
 image.cmap: cividis
