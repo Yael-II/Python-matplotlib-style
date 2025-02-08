@@ -1,4 +1,6 @@
 # Python Matplotlib Style
+
+**Moved to https://codeberg.org/Yael-II/Matplotlib-Style/**
 ## [FR] Utilisation
 Le style peut être utilisé avec `plt.style.use("CHEMIN/REPERTOIRE/YII")`. Ce style est prévu pour générer des figures pouvant être intégrées dans un document LaTeX (police Latin Modern Roman) au format A4 avec :
 - une colonne et des marges de `3 cm` de chaque côté (`_1`)
